@@ -1,0 +1,43 @@
+<ng-template #defaultMode>ADD NEW USER</ng-template>
+<ng-template #editModeTitle>EDIT USER #{{editRowNumber}}</ng-template>
+<ng-template #editModeButton>EDIT USER</ng-template>
+
+<form class="login" #f="ngForm" (ngSubmit)="submitFormHandler(f)">
+    <fieldset>
+        <h3>
+            <ng-container *ngTemplateOutlet="editRowIndex ? editModeTitle : defaultMode"></ng-container>
+        </h3>
+
+        <!-- First Name -->
+        <p class="field">
+            <label for="firstName">First name*</label>
+
+            <input 
+                #firstName="ngModel" 
+                required 
+                type="text" 
+                name="firstName" 
+                id="firstName"
+                ngModel 
+            >
+        </p>
+
+        <!-- Last Name -->
+        <p class="field">
+            <label for="lastName">Last name*</label>
+
+            <input 
+                #lastName="ngModel" 
+                required 
+                type="text" 
+                name="lastName" 
+                id="lastName" 
+                ngModel 
+            >
+        </p>
+
+        <button [disabled]="f.invalid">
+            <ng-container *ngTemplateOutlet="editRowIndex ? editModeButton : defaultMode"></ng-container>
+        </button>
+    </fieldset>
+</form>

@@ -1,0 +1,73 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.user-data {
+    display: flex;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.table-container {
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px 0px grey;
+    width: 800px;
+    padding: 15px 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.add-button {
+    height: 40px;
+    border-radius: 20px;
+}
+
+.actions-button {
+    height: 20px;
+    width: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+
+th:first-child, td:first-child {
+    border-left: none;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+    padding: 0px;
+}
+
+td:last-child {
+    border-left: none;
+    border-top: none;
+}
+
+.data-actions {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    padding: 10px;
+}
+
+img {
+    margin: 0px 10px;
+}
+
+a {
+    margin: 0px 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.active-link {
+    text-decoration: underline;
+    font-weight: 700;
+}

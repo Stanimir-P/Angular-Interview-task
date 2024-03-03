@@ -1,0 +1,43 @@
+<div class="user-data">
+    Current users: {{data.length}} 
+    
+    <ng-container *ngIf="data.length > 0">
+        | Last user added on: {{data[data.length - 1].addedOn}}
+    </ng-container>
+</div>
+
+<div class="table-container">
+
+    <div class="header">
+        <div class="spacer"></div>
+        
+        <h2>
+            USERS
+        </h2>
+        
+        <button (click)="addUserHandler()" class="add-button">ADD NEW</button>
+    </div>
+
+    <table class="table">
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date Added</th>
+            <th>Date Edited</th>
+            <th>Actions</th>
+        </tr>
+
+        <tr *ngFor="let row of data; let indexOfelement=index;">
+            <td>{{indexOfelement + 1}}</td>
+            <td>{{row.firstName}}</td>
+            <td>{{row.lastName}}</td>
+            <td>{{row.addedOn}}</td>
+            <td>{{row.lastEdited}}</td>
+            <td class="data-actions">
+                <button (click)="editDataHandler(indexOfelement)" class="actions-button">E</button>
+                <button (click)="deleteDataHandler(indexOfelement)" class="actions-button">D</button>
+            </td>
+        </tr>
+    </table>
+</div>
